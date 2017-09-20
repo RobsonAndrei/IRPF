@@ -3,7 +3,7 @@ package Tests;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.Test
+import org.junit.Test;
 
 import Dominio.Imposto;
 import Persistence.Contribuinte;
@@ -15,7 +15,7 @@ public class ContribuinteTest {
 	@Before
 	public void setUp() throws Exception {
 		c1 = new Contribuinte("Robson Andrei", "76425584068", 35, 4);
-		c1.setRendiment(5350.59);
+		c1.setRendiment(25350.59);
 
 		c2 = new Contribuinte("Jorge Tadeu", "84705994090", 46, 3);
 		c3 = new Contribuinte("Amarildo Clovis", "839948995980", 22, 1);
@@ -62,16 +62,20 @@ public class ContribuinteTest {
 		assertTrue(c1.toString(), true);
 
 	}
+
 	@Test
 	public void getBaseCalculo() {
 		i1 = new Imposto();
 		c1.setCont_prev_ofic(1200.00);
 		double base = i1.getBaseCalculo(c1);
-		
-		assertEquals(1234.67, base, 2.00);
-		
-		
-		
+		assertEquals(3943.06, base, 2.00);
+	}
+
+	@Test
+	public void i_Apagar() {
+		i1 = new Imposto();
+		double impostoApagar = i1.i_Apagar(i1.getBaseCalculo(c1));
+		assertEquals(0.0, impostoApagar, 2.00);
 	}
 
 }
