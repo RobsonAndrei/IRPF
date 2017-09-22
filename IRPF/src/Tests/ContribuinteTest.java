@@ -75,7 +75,7 @@ public class ContribuinteTest {
 	public void i_Apagar() {
 		i1 = new Imposto();
 		double impostoApagar = i1.i_Apagar(i1.getBaseCalculo(c1));
-		assertEquals(0.0, impostoApagar, 2.00);
+		assertEquals(1835.30, impostoApagar, 2.00);
 	}
 
 }

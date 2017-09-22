@@ -12,6 +12,7 @@ public class Imposto {
 		double base = c1.getRendiment() - c1.getCont_prev_ofic();
 		double aux = base * 0.05;
 		base = base - aux;
+		// System.out.println("Base 5%: " + base);
 
 		return base;
 	}
@@ -24,14 +25,13 @@ public class Imposto {
 			if (baseCalculo > 12000.00 && baseCalculo < 24000.00) {
 				double result = baseCalculo - 12000.00;
 				System.out.println(result * 0.15);
-				return (result * 0.15);
-				
+				return result * 0.15;
 
 			} else {
 				if (baseCalculo >= 24000.00) {
 					double result = baseCalculo - 12000.00;
-					double aux  = (result * 0.15);
-					System.out.println(aux + ((baseCalculo - 24000.00) * 0.275));
+					double aux = (result * 0.15);
+					// System.out.println(aux + ((baseCalculo - 24000.00) * 0.275));
 					return aux + ((baseCalculo - 24000.00) * 0.275);
 				}
 			}
