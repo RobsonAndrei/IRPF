@@ -1,4 +1,9 @@
+
 package Dominio;
+
+/***
+ * Autor Robson Andrei
+ */
 
 import Persistence.Contribuinte;
 
