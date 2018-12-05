@@ -1,4 +1,9 @@
 <application>
+  <component name="GithubAccounts">
+    <account id="55e5a263-ae13-4a3b-8889-e9d1a4d27cad" name="robson.andrei@acad.pucrs.br">
+      <server host="github.com" />
+    </account>
+  </component>
   <component name="GithubSettings">
     <option name="LOGIN" value="robson.andrei@acad.pucrs.br" />
     <option name="AUTH_TYPE" value="BASIC" />
